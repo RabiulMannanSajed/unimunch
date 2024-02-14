@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "img": "https://i.ibb.co/kHSp8qK/burger.png",
+    "price": 27,
+    "foodName": "Burger+Extra chess",
+    "course": "Main course. (1 bowl)",
+    "rating": 4.9
+  },
+  {
+    "id": 2,
+    "img": "https://i.ibb.co/7k2bHXV/chiken-sawarma.png",
+    "price": 27,
+    "foodName": "Chicken Shawarma",
+    "course": "Main course. (1 bowl)",
+    "rating": 4.9
+  },
+  {
+    "id": 3,
+    "img": "https://i.ibb.co/hYP7YJ6/pizza.png",
+    "price": 27,
+    "foodName": "Pizza+Extra chess",
+    "course": "Main course. (1 bowl)",
+    "rating": 4.9
+  },
+  {
+    "id": 4,
+    "img": "https://i.ibb.co/9sWFBtX/sandwich.png",
+    "price": 27,
+    "foodName": "Chicken Sandwich ",
+    "course": "Main course. (1 bowl)",
+    "rating": 4.9
+  },
+  {
+    "id": 5,
+    "img": "https://i.ibb.co/fnM41Ks/hot-dog.png",
+    "price": 27,
+    "foodName": "Hot Dog",
+    "course": "Main course. (1 bowl)",
+    "rating": 4.9
+  },
+  {
+    "id": 6,
+    "img": "https://i.ibb.co/yRhn3Gf/french-fries.png",
+    "price": 27,
+    "foodName": "French Fry",
+    "course": "Main course. (1 bowl)",
+    "rating": 4.9
+  }
+]
