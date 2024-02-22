@@ -1,4 +1,4 @@
-import RestaurantFood from "../../RestaurantFood/RestaurantFood";
+import RestaurantFood from "../../RestaurantFoods/RestaurantFood/RestaurantFood";
 import Banner from "../Banner/Banner";
 import Info from "../Info/Info";
 
