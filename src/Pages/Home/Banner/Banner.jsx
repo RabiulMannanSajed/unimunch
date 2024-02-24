@@ -18,7 +18,7 @@ const Banner = () => {
     <>
       <div>
         <div className=" min-h-screen hero ">
-          <div className="hero-content flex-col lg:flex-row-reverse">
+          <div className="hero-content flex-col lg:flex-row-reverse ">
             <div>
               <div
                 className="partners-intro--thumb aos-init aos-animate "
@@ -97,16 +97,17 @@ const Banner = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-color-pattern"></div>
             <div className="items-end ">
-              <h2 className=" font-extrabold textShadow">
-                Food <span className="text-[#437EFF] ">Order</span>
-              </h2>
-              <p className="font-bold text-xl text-[#525252] ">
-                Welcome to UIU Eats Express, your go-to destination for
-                delicious meals delivered straight to your doorstep within the
-                United International University (UIU) campus.
-              </p>
+              {/* <div className="bg-color-pattern  -z-10 w-11"></div> */}
+              <div className="-mt-80">
+                <div className="bg-color-pattern  -z-10 w-11"></div>
+
+                <h2 className=" ">Get your food delivery in 35 minutes.</h2>
+                <h2 className=" font-extrabold text-7xl ">DON'T STARVE.</h2>
+                <p className="font-extrabold  text-7xl  text-[#437EFF] ">
+                  ORDER NOW!
+                </p>
+              </div>
             </div>
           </div>
         </div>
