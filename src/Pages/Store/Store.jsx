@@ -1,10 +1,11 @@
 import store from "../../assets/store.svg";
+import "./Store.css";
 const Store = () => {
   return (
     <div className="flex mt-7 justify-center">
       {/* this is for img */}
       <div>
-        <img src={store} alt="" />
+        <img className="storeImg" src={store} alt="" />
       </div>
       {/* this is for text */}
       <div className="font-bold mt-10 ml-5 w-1/4">

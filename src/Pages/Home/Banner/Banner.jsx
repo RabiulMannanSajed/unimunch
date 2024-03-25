@@ -16,9 +16,10 @@ const Banner = () => {
   };
   return (
     <>
+      {/*  this rotation  css */}
       <div>
         <div className=" min-h-screen hero ">
-          <div className="hero-content flex-col lg:flex-row-reverse ">
+          <div className="hero-content flex-col lg:flex-row-reverse  ">
             <div>
               <div
                 className="partners-intro--thumb aos-init aos-animate "
@@ -99,7 +100,7 @@ const Banner = () => {
             </div>
             <div className="items-end ">
               {/* <div className="bg-color-pattern  -z-10 w-11"></div> */}
-              <div className="-mt-80">
+              <div>
                 <div className="bg-color-pattern  -z-10 w-11"></div>
 
                 <h2 className=" ">Get your food delivery in 35 minutes.</h2>

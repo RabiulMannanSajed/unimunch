@@ -4,7 +4,6 @@ import info3 from "../../../assets/info/Payment.svg";
 import info4 from "../../../assets/info/Support.svg";
 const Info = () => {
   return (
-    // TODO : if user hover then change the color
     <div className="grid grid-cols-4  bg-white ">
       {/* 1st */}
       <div className=" card bg-[#E8EFFF] hover:bg-[#719DFF] hover:text-white m-1">

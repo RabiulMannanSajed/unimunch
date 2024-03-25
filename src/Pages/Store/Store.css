@@ -1,0 +1,6 @@
+.storeImg {
+  /* width: 500px; /* width of container */
+  height: 500px;
+  object-fit: cover;
+  object-position: -109px 0; /* try 20px 10px */
+}
