@@ -3,7 +3,7 @@ import logo from "../../assets/info/logo.svg";
 const Login = () => {
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200">
+      <div className="hero min-h-screen  backdrop-blur-sm">
         <div className="hero-content flex-col lg:flex-row">
           <div className="text-center lg:text-left">
             <p className="py-6"> DON'T STARVE. </p>
@@ -11,7 +11,7 @@ const Login = () => {
             <h1 className="text-5xl font-bold">ORDER NOW!</h1>
             <img src={logo} alt="" />
           </div>
-          <div className="card shrink-0 w-full max-w-sm bg-[#437EFF]">
+          <div className="card shrink-0 w-full max-w-sm bg-blue-300 backdrop-blur-sm">
             <form className="card-body">
               <div className="form-control">
                 <h2 className="font-bold text-3xl pb-3">Login</h2>
@@ -47,7 +47,7 @@ const Login = () => {
               <div className="form-control mt-6">
                 <button className="btn ">Login</button>
                 <div className="flex justify-between mt-5 items-center">
-                  <h2 className="text-[#DBDBDB]">Need an account? </h2>
+                  <h2 className="text-[#534e4e]">Need an account? </h2>
                   <Link to="/signup" className="btn">
                     {" "}
                     Sign Up

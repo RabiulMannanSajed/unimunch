@@ -4,7 +4,7 @@ const Signup = () => {
   return (
     <div>
       {/* TODO : take the logo img to make the login page and make this responsibe */}
-      <div className="hero min-h-screen bg-base-200">
+      <div className="hero min-h-screen">
         <div className="hero-content flex-col lg:flex-row">
           <div className="text-center lg:text-left">
             <p className="py-6"> DON'T STARVE. </p>

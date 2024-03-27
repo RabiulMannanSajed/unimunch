@@ -1,11 +1,16 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
 
 const Main = () => {
-  //TODO:  in the login and the signUp there will no navBar and Footer
+  const location = useLocation();
+
+  //  if location is login and signUp then the navbar will disable
+  const noHeaderFooter =
+    location.pathname.includes("login") || location.pathname.includes("signup");
+
   return (
     <div>
-      <Navbar></Navbar>
+      {noHeaderFooter || <Navbar></Navbar>}
       <Outlet></Outlet>
     </div>
   );

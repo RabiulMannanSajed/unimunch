@@ -2,7 +2,7 @@
   width: 200px;
   height: 400px;
   border-radius: 50%;
-  background-color: rgba(218, 117, 117, 0.74);
+  background-color: rgba(207, 70, 70, 0.74);
   filter: blur(170px);
   z-index: -1;
   top: 50%;

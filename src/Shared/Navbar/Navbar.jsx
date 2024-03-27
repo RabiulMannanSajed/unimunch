@@ -49,9 +49,7 @@ const Navbar = () => {
         <a className="btn btn-ghost text-xl">daisyUI</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className=" px-1">
-          <ul className="p-2">{navOption}</ul>
-        </ul>
+        <ul className="menu menu-horizontal px-1">{navOption}</ul>
       </div>
       <div className="navbar-end">
         <Link to="/signup" className="btn">

@@ -112,10 +112,9 @@ const Banner = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-between">
-          <div className="bg-color-pattern1"></div>
-          <div className="bg-color-pattern2"></div>
-        </div>
+        <div className="flex justify-between"></div>
+        <div className="banner-color-pattern1"></div>
+        <div className="banner-color-pattern2"></div>
       </div>
     </>
   );

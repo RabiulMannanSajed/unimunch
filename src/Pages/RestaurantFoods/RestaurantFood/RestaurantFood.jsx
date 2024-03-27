@@ -14,19 +14,19 @@ const RestaurantFood = () => {
         <h2 className="text-4xl font-bold ">Popular Food</h2>
         {/*  this is foe the item cetagory */}
         <ul className="menu  bg-base-200  rounded-box mt-5 text-xl">
-          <li className="hover:bg-[#170C34] hover:text-white">
+          <li className="hover:bg-[#170C34] hover:text-white ">
             <a>Item 1</a>
           </li>
-          <li className="hover:bg-[#170C34] hover:text-white">
+          <li className="hover:bg-[#170C34] hover:text-white ">
             <a>Item 2</a>
           </li>
-          <li className="hover:bg-[#170C34] hover:text-white">
+          <li className="hover:bg-[#170C34] hover:text-white ">
             <a>Item 3</a>
           </li>{" "}
-          <li className="hover:bg-[#170C34] hover:text-white">
+          <li className="hover:bg-[#170C34] hover:text-white ">
             <a>Item 3</a>
           </li>{" "}
-          <li className="hover:bg-[#170C34] hover:text-white">
+          <li className="hover:bg-[#170C34] hover:text-white ">
             <a>Item 3</a>
           </li>
         </ul>
