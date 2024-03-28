@@ -1,6 +1,23 @@
 import { Link } from "react-router-dom";
 import "./Signup.css";
+import { useForm } from "react-hook-form";
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 const Signup = () => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+  const { createUser } = useContext(AuthContext);
+
+  const onSubmit = (data) => {
+    createUser(data.email, data.password).then((result) => {
+      const loggedUser = result.user;
+      console.log(loggedUser);
+    });
+  };
   return (
     <div>
       {/* TODO : take the logo img to make the login page and make this responsibe */}
@@ -13,21 +30,37 @@ const Signup = () => {
             <h1 className="text-5xl font-bold">ORDER NOW!</h1>
           </div>
           <div className="card shrink-0 w-full max-w-sm bg-[#437EFF]">
-            <form className="card-body">
+            <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+              <h1>SignUp</h1>
               <div className="form-control">
-                <h2 className="font-bold text-3xl pb-3">Sign in</h2>
-                <p className="text-[#F0F0F0]">
-                  Welcome back! Please enter your details
-                </p>
+                <label className="label">
+                  <span className="label-text">Name</span>
+                </label>
+                <input
+                  type="text"
+                  {...register("name")}
+                  required={true}
+                  name="name"
+                  placeholder="name"
+                  className="input input-bordered"
+                />
+                {errors.name && <span>This field is required</span>}
+              </div>
+              <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
                 <input
-                  type="email"
-                  placeholder="Email"
+                  {...register("email")}
+                  required={true}
+                  name="email"
+                  placeholder="email"
                   className="input input-bordered"
-                  required
+                  type="email"
                 />
+                {errors.email && (
+                  <span className="text-red-600">This field is required</span>
+                )}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -35,10 +68,14 @@ const Signup = () => {
                 </label>
                 <input
                   type="password"
+                  {...register("password", {
+                    required: true,
+                  })}
+                  name="password"
                   placeholder="password"
                   className="input input-bordered"
-                  required
                 />
+
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">
                     Forgot password?
@@ -46,13 +83,21 @@ const Signup = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn ">Signup</button>
-                <div className="flex justify-between mt-5 items-center">
-                  <h2 className="text-[#4A4949]">Need an account? </h2>
-                  <Link to="/login"> Login</Link>
-                </div>
+                <input
+                  className="btn bg-[#ffffff]"
+                  type="submit"
+                  value="Sign Up"
+                />
               </div>
             </form>
+            <p className="p-4">
+              <small>
+                Already have an Account{" "}
+                <Link className="text-white" to="/login">
+                  Login
+                </Link>{" "}
+              </small>
+            </p>
             {/* this is bubble  */}
 
             <div className="bg-color-pattern"></div>

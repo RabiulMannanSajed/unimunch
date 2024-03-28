@@ -8,7 +8,7 @@ import {
 } from "firebase/auth";
 import app from "../Pages/firebase/firebase.config";
 
-const AuthContext = createContext(null);
+export const AuthContext = createContext(null);
 const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -20,7 +20,7 @@ const AuthProvider = ({ children }) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
-  //    this is for signIn an user
+  //    this is for signIn(login) an user
   const signIn = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
   };

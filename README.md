@@ -23,3 +23,6 @@ totalSale<br>
   foodName<br>
   course<br>
   rating<br>
+
+* For signUp <br>
+  React hook form
