@@ -1,8 +1,8 @@
 import love from "../../../assets/love.svg";
-const FoodItem = ({ food }) => {
+const FoodItem = ({ item }) => {
   //   const {} =FoodItem
-  console.log(food);
-  const { id, img, price, foodName, course, rating } = food;
+  // console.log(food);
+  const { id, img, price, foodName, course, rating } = item;
   return (
     <div className="card w-3/4 bg-base-100 shadow-xl mt-24">
       <figure>

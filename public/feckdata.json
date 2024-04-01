@@ -3,8 +3,9 @@
     "id": 1,
     "img": "https://i.ibb.co/kHSp8qK/burger.png",
     "price": 27,
+    "restaurantName": "Khan's kitchen",
     "foodName": "Burger+Extra chess",
-    "course": "Main course. (1 bowl)",
+    "course": "Main course. ",
     "category": "salad",
     "rating": 4.9
   },
@@ -12,8 +13,9 @@
     "id": 2,
     "img": "https://i.ibb.co/7k2bHXV/chiken-sawarma.png",
     "price": 27,
+    "restaurantName": "olympics  kitchen",
     "foodName": "Chicken Shawarma",
-    "course": "Main course. (1 bowl)",
+    "course": "Main course. ",
     "category": "salad",
     "rating": 4.9
   },
@@ -21,17 +23,19 @@
     "id": 3,
     "img": "https://i.ibb.co/hYP7YJ6/pizza.png",
     "price": 27,
+    "restaurantName": "Khan's kitchen",
     "foodName": "Pizza+Extra chess",
-    "course": "Main course. (1 bowl)",
-    "category": "pizza",
+    "course": "Main course. ",
+    "category": "salad",
     "rating": 4.9
   },
   {
     "id": 4,
     "img": "https://i.ibb.co/9sWFBtX/sandwich.png",
     "price": 27,
+    "restaurantName": "olympics  kitchen",
     "foodName": "Chicken Sandwich ",
-    "course": "Main course. (1 bowl)",
+    "course": "Main course. ",
     "category": "pizza",
     "rating": 4.9
   },
@@ -39,17 +43,99 @@
     "id": 5,
     "img": "https://i.ibb.co/fnM41Ks/hot-dog.png",
     "price": 27,
+    "restaurantName": "olympics kitchen",
     "foodName": "Hot Dog",
-    "course": "Main course. (1 bowl)",
-    "category": "soup",
+    "course": "Main course. ",
+    "category": "salad",
     "rating": 4.9
   },
   {
     "id": 6,
     "img": "https://i.ibb.co/yRhn3Gf/french-fries.png",
     "price": 27,
+    "restaurantName": "Khan's kitchen",
     "foodName": "French Fry",
-    "course": "Main course. (1 bowl)",
+    "course": "Main course. ",
+    "category": "pizza",
+    "rating": 4.9
+  },
+  {
+    "id": 7,
+    "img": "https://i.ibb.co/yRhn3Gf/french-fries.png",
+    "price": 27,
+    "restaurantName": "olympics kitchen",
+    "foodName": "French Fry",
+    "course": "Main course. ",
+    "category": "soup",
+    "rating": 4.9
+  },
+  {
+    "id": 7,
+    "img": "https://i.ibb.co/yRhn3Gf/french-fries.png",
+    "price": 27,
+    "restaurantName": "olympics kitchen",
+    "foodName": "French Fry",
+    "course": "Main course. ",
+    "category": "pizza",
+    "rating": 4.9
+  },
+  {
+    "id": 8,
+    "img": "https://i.ibb.co/yRhn3Gf/french-fries.png",
+    "price": 27,
+    "restaurantName": "Khan's kitchen",
+    "foodName": "French Fry",
+    "course": "Main course. ",
+    "category": "soup",
+    "rating": 4.9
+  },
+  {
+    "id": 9,
+    "img": "https://i.ibb.co/yRhn3Gf/french-fries.png",
+    "price": 27,
+    "restaurantName": "olympics  kitchen",
+    "foodName": "French Fry",
+    "course": "Main course. ",
+    "category": "pizza",
+    "rating": 4.9
+  },
+  {
+    "id": 10,
+    "img": "https://i.ibb.co/yRhn3Gf/french-fries.png",
+    "price": 27,
+    "restaurantName": "Khan's kitchen",
+    "foodName": "French Fry",
+    "course": "Main course. ",
+    "category": "soup",
+    "rating": 4.9
+  },
+  {
+    "id": 11,
+    "img": "https://i.ibb.co/yRhn3Gf/french-fries.png",
+    "price": 27,
+    "restaurantName": "olympics  kitchen",
+    "foodName": "French Fry",
+    "course": "Main course. ",
+    "category": "soup",
+    "rating": 4.9
+  },
+  {
+    "id": 12,
+    "img": "https://i.ibb.co/yRhn3Gf/french-fries.png",
+    "price": 27,
+    "restaurantName": "Khan's kitchen",
+    "foodName": "French Fry",
+    "course": "Main course. ",
+    "category": "soup",
+    "rating": 4.9
+  },
+  {
+    "id": 13,
+    "img": "https://i.ibb.co/yRhn3Gf/french-fries.png",
+    "price": 27,
+    "restaurantName": "olympics  kitchen",
+    "foodName": "French Fry",
+    "course": "Main course. ",
     "category": "soup",
     "rating": 4.9
   }

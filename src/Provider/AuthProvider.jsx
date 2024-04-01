@@ -9,6 +9,7 @@ import {
 import app from "../Pages/firebase/firebase.config";
 
 export const AuthContext = createContext(null);
+
 const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -28,9 +29,17 @@ const AuthProvider = ({ children }) => {
   //    this is for logOut an user
   const logOut = () => {
     setLoading(true);
-    return signOut();
+    return signOut(auth);
   };
 
+  //  this is for the update an user by his name and photo
+  const UpdateUserProfile = (name, photo) => {
+    setLoading(true);
+    return updateProfile(auth.currentUser, {
+      displayName: name,
+      photoURL: photo,
+    });
+  };
   //   this is watch is user is created or not if the user created then go inside of this
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -49,6 +58,7 @@ const AuthProvider = ({ children }) => {
     createUser,
     signIn,
     logOut,
+    UpdateUserProfile,
   };
 
   return (
