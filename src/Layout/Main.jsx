@@ -1,5 +1,8 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
+import UserHomepage from "../Pages/UserHomepage/UserHomepage";
 
 const Main = () => {
   const location = useLocation();
@@ -8,10 +11,19 @@ const Main = () => {
   const noHeaderFooter =
     location.pathname.includes("login") || location.pathname.includes("signup");
 
+  const { user } = useContext(AuthContext);
   return (
     <div>
-      {noHeaderFooter || <Navbar></Navbar>}
-      <Outlet></Outlet>
+      {user ? (
+        <>
+          <UserHomepage></UserHomepage>
+        </>
+      ) : (
+        <>
+          {noHeaderFooter || <Navbar></Navbar>}
+          <Outlet></Outlet>
+        </>
+      )}
     </div>
   );
 };
