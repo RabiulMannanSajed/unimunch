@@ -7,13 +7,7 @@ const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
 
   console.log("user email", user?.email);
-  // const handleLogOut = () => {
-  //   logOut()
-  //     .then(() => {
-  //       alert("SuccessFully logOut sir ");
-  //     })
-  //     .catch((error) => console.log(error));
-  // };
+
   const navOption = (
     <>
       <li>
@@ -21,15 +15,13 @@ const Navbar = () => {
       </li>
       <li>
         {" "}
-        <Link to="/foodOrder">Food Order</Link>
+        <Link>Food Order</Link>
       </li>
       <li>
         {" "}
-        <Link to="/aboutUs">About Us</Link>
+        <Link>About Us</Link>
       </li>
-      <li>
-        <Link to="/contactus"></Link>
-      </li>
+      <li>{/* <Link to="/contactus"></Link> */}</li>
     </>
   );
   return (
@@ -64,20 +56,11 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navOption}</ul>
       </div>
-      {/* <div className="navbar-end">
-        <Link to="/signup" className="btn">
-          SignUp
-        </Link>
-      </div> */}
 
       {/*  if user is present then he can logOut or he can signUp/login */}
       <div className="navbar-end">
         {user ? (
-          <>
-            {/* <button className="btn btn-ghost">LogOut</button> */}
-            {/* navigate him to another page  */}
-            <UserHomepage></UserHomepage>
-          </>
+          <></>
         ) : (
           <>
             <ul>

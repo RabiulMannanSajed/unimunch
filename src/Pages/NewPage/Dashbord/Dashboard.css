@@ -1,8 +1,49 @@
 .discount {
   background-image: url("https://i.ibb.co/JrYm99b/Group-196.png");
   background-color: #1542a4;
-  width: 774px;
+  width: 970px;
   height: 311px;
   flex-shrink: 0;
   border-radius: 14px;
+}
+
+.High-cart {
+  width: 60%;
+  height: 463px;
+  flex-shrink: 0;
+  border-radius: 26px;
+  background: #d1ebff;
+}
+.burger {
+  width: 200px;
+  height: 147.07px;
+  flex-shrink: 0;
+  margin: 0 auto;
+}
+.banner-color-patterred {
+  width: 200px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: #0141cb;
+  filter: blur(170px);
+  z-index: -1;
+  top: 0;
+  left: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  /* margin-left: -500px; */
+}
+.banner-color-patterBlue {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: rgba(43, 230, 26, 0.685);
+
+  filter: blur(196.35000610351562px);
+  /* z-index: -1; */
+  top: 50%;
+  left: o;
+  transform: translateX(10%);
+  position: absolute;
+  margin-left: 790px;
 }

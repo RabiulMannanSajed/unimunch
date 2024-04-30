@@ -1,4 +1,3 @@
-import React from "react";
 import FoodItem from "../FoodItem/FoodItem";
 
 const FoodData = ({ items }) => {

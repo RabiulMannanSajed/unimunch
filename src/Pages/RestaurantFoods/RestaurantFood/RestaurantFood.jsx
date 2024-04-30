@@ -69,13 +69,7 @@ const RestaurantFood = () => {
         </div>
       </div>
       {/* form here pass the food data to another component pass the data as item  */}
-      {/* <div className="grid grid-cols-2 gap-5  ">
-        {menu.map((food) => (
-          <div key={food._id}>
-            <FoodItem food={food}></FoodItem>
-          </div>
-        ))}
-      </div> */}
+
       <div>
         <FoodData items={soup}></FoodData>
       </div>

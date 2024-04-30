@@ -112,7 +112,6 @@
   left: 0;
   transform: translateX(-50%);
   position: absolute;
-  /* margin-left: -500px; */
 }
 .banner-color-pattern2 {
   width: 500px;
@@ -127,13 +126,3 @@
   position: absolute;
   margin-top: -200px;
 }
-/* .bg-color-pattern {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: #7bff6f62;
-  filter: blur(150px);
-  z-index: -1;
-  position: relative;
-  margin-bottom: -50px;
-} */

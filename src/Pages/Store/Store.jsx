@@ -9,7 +9,7 @@ const Store = () => {
       </div>
       {/* this is for text */}
       <div className="font-bold mt-10 ml-5 w-1/4">
-        <h1 className="text-7xl ">Fast Delivery And Best Service</h1>
+        <h1 className="text-4xl ">Fast Delivery And Best Service</h1>
         <p className="text-[#717171] text-xl mt-5">
           We always try to satisfy our customers by presenting super fast
           delivery and the best service from us.

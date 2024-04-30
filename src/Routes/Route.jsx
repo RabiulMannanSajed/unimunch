@@ -28,19 +28,19 @@ export const router = createBrowserRouter([
     ],
   },
   {
-    path: "/",
+    path: "/dashboard",
     element: <UserHomepage></UserHomepage>,
     children: [
       {
-        path: "/dashboard",
+        path: "/dashboard/dashboard",
         element: <Dashbord></Dashbord>,
       },
       {
-        path: "/like",
+        path: "/dashboard/like",
         element: <Like></Like>,
       },
       {
-        path: "/cart",
+        path: "/dashboard/cart",
         element: <Cart></Cart>,
       },
     ],

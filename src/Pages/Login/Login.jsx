@@ -1,13 +1,32 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/info/logo.svg";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 const Login = () => {
+  //  take the user form the data base
+  //  take the value form the user  form
+  const { signIn } = useContext(AuthContext);
+  const [firebaseErrorMessage, setFirebaseErrorMessage] = useState(null);
   const handleLogin = (event) => {
-    event.preventDefault();
-    const form = event.target;
+    event.preventDefault(); // stop page to reload
+    const form = event.target; // take the value form input
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
+
+    signIn(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        alert("Successfully user login");
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        setFirebaseErrorMessage(errorMessage);
+        console.log(firebaseErrorMessage);
+      });
   };
+
   return (
     <div>
       <div className="hero min-h-screen  backdrop-blur-sm">
@@ -30,6 +49,7 @@ const Login = () => {
                 </label>
                 <input
                   type="email"
+                  name="email"
                   placeholder="Email"
                   className="input input-bordered"
                   required
@@ -41,6 +61,7 @@ const Login = () => {
                 </label>
                 <input
                   type="password"
+                  name="password"
                   placeholder="password"
                   className="input input-bordered"
                   required
