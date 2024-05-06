@@ -18,6 +18,7 @@ const Signup = () => {
       console.log("this is form signUp", loggedUser);
     });
   };
+
   return (
     <div>
       {/* TODO : take the logo img to make the login page and make this responsibe */}

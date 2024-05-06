@@ -30,7 +30,6 @@ const Like = () => {
           ))}
         </div>
         <div>
-          {" "}
           <BurgerVariant></BurgerVariant>
           <FastDelivery></FastDelivery>
         </div>
