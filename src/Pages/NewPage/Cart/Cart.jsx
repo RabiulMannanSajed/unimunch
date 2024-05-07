@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import useOrder from "../../../hooks/useOrder";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import CartFood from "../CartFood/CartFood";
+import TotalOrderd from "../TotalOrderd/TotalOrderd";
 
 const Cart = () => {
   const { user } = useContext(AuthContext);
@@ -17,14 +18,19 @@ const Cart = () => {
   }, [orderFoods, user?.email]);
 
   return (
-    <div className="bg-[#D1EBFF] p-5 rounded-xl">
-      {addedFoods.map((addedFood) => (
-        <CartFood
-          key={addedFood._id}
-          addedFood={addedFood}
-          refetch={refetch}
-        ></CartFood>
-      ))}
+    <div className="flex">
+      <div className="bg-[#D1EBFF] p-5 rounded-xl">
+        {addedFoods.map((addedFood) => (
+          <CartFood
+            key={addedFood._id}
+            addedFood={addedFood}
+            refetch={refetch}
+          ></CartFood>
+        ))}
+      </div>
+      <div>
+        <TotalOrderd></TotalOrderd>
+      </div>
     </div>
   );
 };

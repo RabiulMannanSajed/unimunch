@@ -7,6 +7,7 @@ import UserHomepage from "../Pages/UserHomepage/UserHomepage";
 import Dashbord from "../Pages/NewPage/Dashbord/Dashbord";
 import Like from "../Pages/NewPage/Like/Like";
 import Cart from "../Pages/NewPage/Cart/Cart";
+import Payment from "../Pages/NewPage/Payment/Payment";
 
 export const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ export const router = createBrowserRouter([
       {
         path: "/dashboard/cart",
         element: <Cart></Cart>,
+      },
+      {
+        path: "/dashboard/payment",
+        element: <Payment></Payment>,
       },
     ],
   },

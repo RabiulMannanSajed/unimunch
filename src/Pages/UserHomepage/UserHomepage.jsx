@@ -1,20 +1,31 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import logo from "../../assets/info/logo.svg";
 import { AuthContext } from "../../Provider/AuthProvider";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { TiHome } from "react-icons/ti";
 import { FaHeart, FaShoppingCart } from "react-icons/fa";
 import { IoIosLogOut } from "react-icons/io";
+import useUser from "../../hooks/useUser";
 
 const UserHomepage = () => {
+  const { users } = useUser();
   const { user, logOut } = useContext(AuthContext);
+  const [userEmail, setUserEmail] = useState([]);
+  const navigate = useNavigate();
+
   const handleLogOut = () => {
     logOut()
       .then(() => {
         alert("SuccessFully logOut sir ");
+        navigate("/");
       })
       .catch((error) => console.log(error));
   };
+  useEffect(() => {
+    // const matchEmail = users.find((userE) => userE?.email == user?.email);
+    // setUserEmail(matchEmail);
+    // console.log(matchEmail);
+  }, [user?.email, users]);
   return (
     <div className=" ">
       {/*  this is  navbar  */}
@@ -63,6 +74,7 @@ const UserHomepage = () => {
         <div className="mt-28 bg-[#1542A4] md:w-20 md:h-3/4 md:fixed rounded-lg   md:flex-col flex  text-white text-center ">
           <div>
             <ul className="pt-5 text-center">
+              {}
               <li>
                 <Link to="/dashboard/dashboard">
                   <TiHome className="text-3xl mb-5 ml-5 " />

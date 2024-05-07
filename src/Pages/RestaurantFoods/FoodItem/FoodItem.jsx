@@ -4,6 +4,8 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 const FoodItem = ({ item }) => {
+  const date = new Date();
+
   const path = useLocation();
   console.log(path.pathname);
   const { user } = useContext(AuthContext);
@@ -22,6 +24,7 @@ const FoodItem = ({ item }) => {
         foodName: foodName,
         course: course,
         userEmail: user?.email,
+        date: date,
       };
       fetch("http://localhost:5000/likeFoods", {
         method: "POST",

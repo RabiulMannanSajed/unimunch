@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import TotalOrderd from "../TotalOrderd/TotalOrderd";
 
 const CartFood = ({ addedFood, refetch }) => {
-  const { img, foodName, _id, price } = addedFood;
+  const { img, foodName, _id, price, state } = addedFood;
   const [count, setCount] = useState(1);
 
   const increment = () => {
@@ -21,28 +22,35 @@ const CartFood = ({ addedFood, refetch }) => {
     const totalPrice = price * count;
     if (isChecked) {
       // Patch data when checkbox is checked
-      patchData(id, foodName, totalPrice, count, "unchecked");
+      patchData(id, foodName, totalPrice, count, totalPrice, "unchecked");
     } else {
       // Patch data when checkbox is unchecked
-      patchData(id, foodName, totalPrice, count, "checked");
+      patchData(id, foodName, totalPrice, count, totalPrice, "checked");
     }
   };
-  const patchData = (id, foodName, price, count, state) => {
+  const patchData = (id, foodName, price, count, totalPrice, state) => {
     // Example patch request logic, replace with your actual patch request
     console.log(`Patching data for ${foodName} ${price} ${count} as ${state}`);
+
     // Example patch request:
-    fetch(`/api/patchData/${id}`, {
+    fetch(`http://localhost:5000/orderFoods/${id}/checked`, {
       method: "PATCH",
-      body: JSON.stringify({ id, foodName, price, count, state }),
+      body: JSON.stringify({ id, foodName, price, totalPrice, count, state }),
       headers: {
         "Content-Type": "application/json",
       },
-    }).then((response) => {
-      // Handle response
-    });
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.modifiedCount) {
+          console.log("added");
+          refetch();
+        }
+      });
   };
+
   return (
-    <div className=" mt-2 mb-4 p-5 rounded-xl backdrop-blur-sm bg-white">
+    <div className=" mt-2 mb-4 p-5 rounded-xl  bg-white">
       {" "}
       <div className="banner-color-patterred"></div>
       <div className="banner-color-patterBlue"></div>
@@ -52,7 +60,7 @@ const CartFood = ({ addedFood, refetch }) => {
             className="mr-3 "
             type="checkbox"
             name=""
-            id=""
+            checked={state === "checked"}
             onChange={() => handleCheckBoxChange(_id)}
           />
           <div className="avatar">

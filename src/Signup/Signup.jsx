@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Signup.css";
 import { useForm } from "react-hook-form";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 const Signup = () => {
   const {
@@ -10,15 +10,46 @@ const Signup = () => {
     reset,
     formState: { errors },
   } = useForm();
-  const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const { createUser, UpdateUserProfile } = useContext(AuthContext);
+  const [userType, setUserType] = useState("normal");
 
   const onSubmit = (data) => {
     createUser(data.email, data.password).then((result) => {
       const loggedUser = result.user;
-      console.log("this is form signUp", loggedUser);
+      console.log(loggedUser);
+
+      UpdateUserProfile(data.name, data.photoUrl)
+        .then(() => {
+          const saveUser = {
+            name: data.name,
+            email: data.email,
+            userType: userType,
+          };
+
+          // this is taking the data of user and post the info to the database
+          fetch("http://localhost:5000/users", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(saveUser),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              if (data.insertedId) {
+                reset();
+                navigate("/dashboard/dashboard");
+              }
+            });
+        })
+        .catch((error) => console.log(error));
     });
   };
-
+  const handleUserTypeChange = (event) => {
+    setUserType(event.target.value);
+  };
   return (
     <div>
       {/* TODO : take the logo img to make the login page and make this responsibe */}
@@ -83,6 +114,30 @@ const Signup = () => {
                   </a>
                 </label>
               </div>
+              <div className="form-control mt-4">
+                {" "}
+                <label className="flex items-center">
+                  <input
+                    type="radio"
+                    value="delivery"
+                    checked={userType === "delivery"}
+                    onChange={handleUserTypeChange}
+                    className="form-radio h-5 w-5 text-blue-500"
+                  />
+                  <span className="ml-2 text-white">Delivery Boy</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="radio"
+                    value="normal"
+                    checked={userType === "normal"}
+                    onChange={handleUserTypeChange}
+                    className="form-radio h-5 w-5 text-blue-500"
+                  />
+                  <span className="ml-2 text-white">Normal User</span>
+                </label>
+              </div>
+
               <div className="form-control mt-6">
                 <input
                   className="btn bg-[#ffffff]"

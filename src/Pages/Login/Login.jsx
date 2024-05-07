@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/info/logo.svg";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
@@ -6,6 +6,11 @@ const Login = () => {
   //  take the user form the data base
   //  take the value form the user  form
   const { signIn } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location);
+  const from = location.state?.from?.pathname || "/dashboard/dashboard";
+
   const [firebaseErrorMessage, setFirebaseErrorMessage] = useState(null);
   const handleLogin = (event) => {
     event.preventDefault(); // stop page to reload
@@ -19,6 +24,7 @@ const Login = () => {
         const user = result.user;
         console.log(user);
         alert("Successfully user login");
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         const errorMessage = error.message;
